@@ -112,7 +112,7 @@ class MongoSyncer(CommonSyncer):
                         groups = []
 
                     n += 1
-                    if n % 10000 == 0:
+                    if n % 1000 == 0:
                         self._progress_logger.add(src_ns, n)
                         n = 0
 
@@ -214,7 +214,7 @@ class MongoSyncer(CommonSyncer):
 
                     n += 1
                     total += 1
-                    if n % 10000 == 0:
+                    if n % 1000 == 0:
                         prog_q.put(n)
                         n = 0
 
