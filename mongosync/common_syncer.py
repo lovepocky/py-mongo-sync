@@ -42,8 +42,8 @@ class CommonSyncer(object):
         self._last_logtime = time.time()  # use in oplog replay
 
         # for large collections
-        self._n_workers = 8  # multi-process
-        self._large_coll_docs = 1000000  # 100w
+        self._n_workers = 1  # multi-process
+        self._large_coll_docs = 100000000  # 10000w
 
     @property
     def from_to(self):
